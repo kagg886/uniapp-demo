@@ -58,7 +58,15 @@
 		methods: {
 			goLogin() {
 				if (!this.login) {
-					console.log("点击前往登录")
+					uni.navigateTo({
+						url: '/pages/login/login',
+						success(e) {
+							console.log(e);
+						},
+						fail(e) {
+							console.log(e);
+						}
+					});
 				}
 			}
 		}
